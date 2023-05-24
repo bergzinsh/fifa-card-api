@@ -1,6 +1,5 @@
-using FifaCardApi.Domain;
 using FifaCardApi.Domain.Request;
-using FifaCardApi.Service;
+using FifaCardApi.Service.Services.Interfaces;
 using FifaCardApi.Service.Validators;
 using Microsoft.AspNetCore.Mvc;
 

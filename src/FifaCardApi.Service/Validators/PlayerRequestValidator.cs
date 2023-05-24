@@ -9,45 +9,45 @@ namespace FifaCardApi.Service.Validators
         public PlayerRequestValidator()
         {
             RuleFor(x => x.PlayerCard.Pace)
-                .Must(pace 
+                .Must(pace
                 => 0 < pace
                 && pace < 100)
-                .WithMessage((p, a) 
+                .WithMessage((p, a)
                     => string.Format(_errorMessage, nameof(p.PlayerCard.Pace), p.PlayerCard.Pace.ToString()));
-            
+
             RuleFor(x => x.PlayerCard.Shooting)
-                .Must(shooting 
+                .Must(shooting
                     => 0 < shooting
                        && shooting < 100)
-                .WithMessage((p, a) 
+                .WithMessage((p, a)
                     => string.Format(_errorMessage, nameof(p.PlayerCard.Shooting), p.PlayerCard.Shooting.ToString()));
-            
+
             RuleFor(x => x.PlayerCard.Passing)
-                .Must(passing 
+                .Must(passing
                     => 0 < passing
                        && passing < 100)
-                .WithMessage((p, pace) 
+                .WithMessage((p, pace)
                     => string.Format(_errorMessage, nameof(p.PlayerCard.Passing), p.PlayerCard.Passing.ToString()));
-            
+
             RuleFor(x => x.PlayerCard.Dribbling)
-                .Must(dribbling 
+                .Must(dribbling
                     => 0 < dribbling
                        && dribbling < 100)
-                .WithMessage((p, pace) 
+                .WithMessage((p, pace)
                     => string.Format(_errorMessage, nameof(p.PlayerCard.Dribbling), p.PlayerCard.Dribbling.ToString()));
-            
+
             RuleFor(x => x.PlayerCard.Defending)
-                .Must(defending 
+                .Must(defending
                     => 0 < defending
                        && defending < 100)
-                .WithMessage((p, pace) 
+                .WithMessage((p, pace)
                     => string.Format(_errorMessage, nameof(p.PlayerCard.Defending), p.PlayerCard.Defending.ToString()));
-            
+
             RuleFor(x => x.PlayerCard.Physicality)
-                .Must(physicality 
+                .Must(physicality
                     => 0 < physicality
                        && physicality < 100)
-                .WithMessage((p, pace) 
+                .WithMessage((p, pace)
                     => string.Format(_errorMessage, nameof(p.PlayerCard.Physicality), p.PlayerCard.Physicality.ToString()));
         }
     }

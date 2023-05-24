@@ -1,5 +1,6 @@
 ﻿using FifaCardApi.Domain.Data;
 using FifaCardApi.Domain.Request;
+using FifaCardApi.Service.Services.Interfaces;
 using Microsoft.Extensions.Logging;
 
 namespace FifaCardApi.Service.Services
@@ -7,7 +8,7 @@ namespace FifaCardApi.Service.Services
     public class CardService : ICardService
     {
         private readonly ILogger<ICardService> _logger;
-        
+
         public CardService(ILogger<ICardService> logger)
         {
             _logger = logger;

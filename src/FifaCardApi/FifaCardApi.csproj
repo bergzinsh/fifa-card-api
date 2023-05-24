@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
@@ -20,6 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\FifaCardApi.Domain\FifaCardApi.Domain.csproj" />
       <ProjectReference Include="..\FifaCardApi.Service\FifaCardApi.Service.csproj" />
     </ItemGroup>
 

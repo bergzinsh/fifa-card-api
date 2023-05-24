@@ -1,4 +1,5 @@
 ﻿using FifaCardApi.Service.Services;
+using FifaCardApi.Service.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FifaCardApi.Service.IoC
@@ -8,6 +9,6 @@ namespace FifaCardApi.Service.IoC
         public static void AddCoreServices(this IServiceCollection services)
         {
             services.AddSingleton<ICardService, CardService>();
-        } 
+        }
     }
 }

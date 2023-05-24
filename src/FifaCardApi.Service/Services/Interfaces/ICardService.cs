@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using FifaCardApi.Domain.Data;
 using FifaCardApi.Domain.Request;
+using FifaCardApi.Domain.Data;
 
-namespace FifaCardApi.Service
+namespace FifaCardApi.Service.Services.Interfaces
 {
     public interface ICardService
     {
