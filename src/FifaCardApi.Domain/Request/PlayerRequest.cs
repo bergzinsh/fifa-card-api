@@ -4,9 +4,9 @@ namespace FifaCardApi.Domain.Request
 {
     public class PlayerRequest
     {
-        public PlayerCard PlayerCard { get; }
+        public Card PlayerCard { get; }
 
-        public PlayerRequest(PlayerCard playerCard)
+        public PlayerRequest(Card playerCard)
         {
             PlayerCard = playerCard;
         }

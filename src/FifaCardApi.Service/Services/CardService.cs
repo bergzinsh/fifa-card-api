@@ -14,12 +14,10 @@ namespace FifaCardApi.Service.Services
             _logger = logger;
         }
 
-        public PlayerCard ReturnPlayerCard(PlayerRequest request)
+        public Card ReturnPlayerCard(PlayerRequest request)
         {
-            return new PlayerCard()
+            return new Card()
             {
-                Name = request.PlayerCard.Name,
-                Age = request.PlayerCard.Age,
                 Pace = request.PlayerCard.Pace,
                 Shooting = request.PlayerCard.Shooting,
                 Passing = request.PlayerCard.Passing,

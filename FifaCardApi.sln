@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifaCardApi.Service", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifaCardApi.Domain", "src\FifaCardApi.Domain\FifaCardApi.Domain.csproj", "{FB57E6DB-40BE-4AA6-8F02-EF749F5DF4B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaCardApi.Repository", "src\FifaCardApi.Repository\FifaCardApi.Repository.csproj", "{BF0E070C-85AC-4588-A46D-3DD80FD0D503}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{FB57E6DB-40BE-4AA6-8F02-EF749F5DF4B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB57E6DB-40BE-4AA6-8F02-EF749F5DF4B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB57E6DB-40BE-4AA6-8F02-EF749F5DF4B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0E070C-85AC-4588-A46D-3DD80FD0D503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0E070C-85AC-4588-A46D-3DD80FD0D503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0E070C-85AC-4588-A46D-3DD80FD0D503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0E070C-85AC-4588-A46D-3DD80FD0D503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
