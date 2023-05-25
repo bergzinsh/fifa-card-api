@@ -1,6 +1,7 @@
 using FifaCardApi.Domain.Request;
 using FifaCardApi.Service.Services.Interfaces;
 using FifaCardApi.Service.Validators;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FifaCardApi.Controllers;
@@ -19,10 +20,10 @@ public class CardController : ControllerBase
     }
 
     [HttpGet("get")]
-    public IActionResult GetPlayerCard([FromBody] PlayerRequest request)
+    public IActionResult GetPlayerCard([FromBody] PlayerCreationRequest request)
     {
         var requestValidator = new PlayerRequestValidator();
-        var validationResult = requestValidator.Validate(request);
+        var validationResult = requestValidator.Validate(request.CardAttributes);
 
         if (!validationResult.IsValid)
             return BadRequest(new
@@ -30,26 +31,33 @@ public class CardController : ControllerBase
                 Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToArray()
             });
         
-        var response = _cardService.ReturnPlayerCard(request);
-        return Ok(response);
+        return Ok();
     }
 
     [HttpPost("create")]
-    public IActionResult CreatePlayerCard([FromBody] PlayerRequest request)
+    public IActionResult CreatePlayerCard([FromBody] PlayerCreationRequest request)
     {
-        _logger.LogInformation("WIP");
+        var requestValidator = new PlayerRequestValidator();
+        var validationResult = requestValidator.Validate(request.CardAttributes);
+
+        if (!validationResult.IsValid)
+            return BadRequest(new
+            {
+                Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToArray()
+            });
+
         return Ok();
     }
     
     [HttpPatch("update")]
-    public IActionResult UpdatePlayerCard([FromBody] PlayerRequest request)
+    public IActionResult UpdatePlayerCard([FromBody] PlayerCreationRequest request)
     {
         _logger.LogInformation("WIP");
         return Ok();
     }
     
     [HttpDelete("delete")]
-    public IActionResult DeletePlayerCard([FromBody] PlayerRequest request)
+    public IActionResult DeletePlayerCard([FromBody] PlayerCreationRequest request)
     {
         _logger.LogInformation("WIP");
         return Ok();

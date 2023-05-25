@@ -1,15 +1,17 @@
-﻿namespace FifaCardApi.Domain.Data
+﻿using FifaCardApi.Domain.Data;
+using System.Text.Json.Serialization;
+
+namespace FifaCardApi.Domain.Request.Model
 {
-    public class Card
+    public class PlayerRequestModel
     {
-        public Guid Id { get; set; }
+        public string? Name { get; set; }
+        public short Age { get; set; }
         public short Pace { get; set; }
         public short Shooting { get; set; }
         public short Passing { get; set; }
         public short Dribbling { get; set; }
         public short Defending { get; set; }
         public short Physicality { get; set; }
-        public Guid PlayerId { get; set; }
-        public Player? Player { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace FifaCardApi.Service.Services.Interfaces
 {
     public interface ICardService
     {
-        Card ReturnPlayerCard(PlayerRequest request);
+
     }
 }
