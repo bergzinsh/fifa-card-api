@@ -12,10 +12,10 @@ namespace FifaCardApi.Domain.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Player>()
-                .HasMany(a => a.Cards)
-                .WithOne(b => b.Player)
-                .HasForeignKey(b => b.PlayerId);
+            modelBuilder.Entity<Card>()
+                .HasOne(a => a.Player)
+                .WithMany(b => b.Cards)
+                .HasForeignKey(a => a.PlayerId);
         }
     }
 }

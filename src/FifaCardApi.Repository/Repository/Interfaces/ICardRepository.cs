@@ -9,6 +9,7 @@ namespace FifaCardApi.Repository.Repository.Interfaces
 {
     public interface ICardRepository
     {
-        public Task<int> InsertNewPlayer(Player player, Card card);
+        public bool InsertNewPlayer(Player player);
+        public bool InsertNewCard (Card card, Guid playerId);
     }
 }

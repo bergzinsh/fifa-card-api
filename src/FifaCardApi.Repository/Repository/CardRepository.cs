@@ -17,13 +17,21 @@ namespace FifaCardApi.Repository.Repository
             _playerContext = playerContext;
         }
 
-        public async Task<int> InsertNewPlayer(Player player, Card card)
+        public bool InsertNewPlayer(Player player)
         {
             _playerContext.Player.Add(player);
-            _playerContext.Cards.Add(card);
-            var result = await _playerContext.SaveChangesAsync();
+            var resultPlayer = _playerContext.SaveChanges();
 
-            return result;
+            return true;
+        }
+
+        public bool InsertNewCard(Card card, Guid playerId)
+        {
+            card.PlayerId = playerId;
+            _playerContext.Cards.Add(card);
+            var resultCard = _playerContext.SaveChanges();
+
+            return true;
         }
     }
 }

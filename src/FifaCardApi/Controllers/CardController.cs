@@ -37,16 +37,25 @@ public class CardController : ControllerBase
     [HttpPost("create")]
     public IActionResult CreatePlayerCard([FromBody] PlayerCreationRequest request)
     {
-        var requestValidator = new PlayerRequestValidator();
-        var validationResult = requestValidator.Validate(request.CardAttributes);
+        try
+        {
+            var requestValidator = new PlayerRequestValidator();
+            var validationResult = requestValidator.Validate(request.CardAttributes);
 
-        if (!validationResult.IsValid)
-            return BadRequest(new
-            {
-                Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToArray()
-            });
+            if (!validationResult.IsValid)
+                return BadRequest(new
+                {
+                    Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToArray()
+                });
 
-        return Ok();
+            _cardService.MapNewPlayerCard(request.CardAttributes);
+
+            return Ok();
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
     
     [HttpPatch("update")]

@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifaCardApi.Service", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifaCardApi.Domain", "src\FifaCardApi.Domain\FifaCardApi.Domain.csproj", "{FB57E6DB-40BE-4AA6-8F02-EF749F5DF4B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaCardApi.Repository", "src\FifaCardApi.Repository\FifaCardApi.Repository.csproj", "{BF0E070C-85AC-4588-A46D-3DD80FD0D503}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifaCardApi.Repository", "src\FifaCardApi.Repository\FifaCardApi.Repository.csproj", "{BF0E070C-85AC-4588-A46D-3DD80FD0D503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +52,7 @@ Global
 		{A48D63B0-12AC-4BAE-8B28-03293115F1AB} = {77A7767E-B449-4385-95CB-9E228A20ABE4}
 		{E486D7A7-6D0D-4F02-A314-538091121DDD} = {7D4EAC7E-056F-4137-9AD9-3EAB5FE6FC10}
 		{FB57E6DB-40BE-4AA6-8F02-EF749F5DF4B5} = {7D4EAC7E-056F-4137-9AD9-3EAB5FE6FC10}
+		{BF0E070C-85AC-4588-A46D-3DD80FD0D503} = {7D4EAC7E-056F-4137-9AD9-3EAB5FE6FC10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF348803-629E-4929-8D0C-05CDCE64BCCE}
